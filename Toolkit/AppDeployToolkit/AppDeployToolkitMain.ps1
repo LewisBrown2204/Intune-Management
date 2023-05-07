@@ -103,7 +103,7 @@ Param (
 #region VariableDeclaration
 
 ## Variables: Toolkit Name
-[String]$appDeployToolkitName = 'PSAppDeployToolkit'
+[String]$appDeployToolkitName = 'Intune Deployment'
 [String]$appDeployMainScriptFriendlyName = 'App Deploy Toolkit Main'
 
 ## Variables: Script Info
