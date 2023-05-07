@@ -106,10 +106,10 @@ Try {
     ##*===============================================
     ##* VARIABLE DECLARATION
     ##*===============================================
-    ## Variables: Application
-TODO[String]$appVendor = ''
-TODO[String]$appName = ''
-TODO[String]$appVersion = ''
+    ## TODO Variables: Application
+    [String]$appVendor = ''
+    [String]$appName = ''
+    [String]$appVersion = ''
     [String]$appArch = ''
     [String]$appLang = ''
     [String]$appRevision = ''
@@ -181,13 +181,13 @@ TODO[String]$appVersion = ''
         ##*===============================================
         [String]$installPhase = 'Pre-Installation'
 
-        ## Show Welcome Message, close Internet Explorer if required, allow up to 3 deferrals, verify there is enough disk space to complete the install, and persist the prompt
-TODO    Show-InstallationWelcome -CloseApps '' -AllowDefer -DeferTimes 3 -CheckDiskSpace -PersistPrompt
+        ## TODO Show Welcome Message, close Application if required, allow up to 3 deferrals, verify there is enough disk space to complete the install, and persist the prompt
+        Show-InstallationWelcome -CloseApps '' -AllowDefer -DeferTimes 3 -CheckDiskSpace -PersistPrompt
 
-        ## Show Progress Message (with the default message)
+        ## TODO Show Progress Message (with the default message)
         Show-InstallationProgress
 
-TODO    ## <Perform Pre-Installation tasks here>
+        ## <Perform Pre-Installation tasks here>
 
 
         ##*===============================================
@@ -205,7 +205,7 @@ TODO    ## <Perform Pre-Installation tasks here>
             }
         }
 
-TODO    ## <Perform Installation tasks here>
+        ## TODO <Perform Installation tasks here>
 
 
         ##*===============================================
@@ -213,9 +213,9 @@ TODO    ## <Perform Installation tasks here>
         ##*===============================================
         [String]$installPhase = 'Post-Installation'
 
-TODO    ## <Perform Post-Installation tasks here>
+        ## TODO  <Perform Post-Installation tasks here>
 
-TODO    ## Display a message at the end of the install
+        ## TODO Display a message at the end of the install
         If (-not $useDefaultMsi) {
             Show-InstallationPrompt -Message 'Application is now installed' -ButtonMiddleText 'Ok' -NoWait
         }
@@ -226,13 +226,13 @@ TODO    ## Display a message at the end of the install
         ##*===============================================
         [String]$installPhase = 'Pre-Uninstallation'
 
-        ## Show Welcome Message, close Internet Explorer with a 60 second countdown before automatically closing
-TODO    Show-InstallationWelcome -CloseApps '' -CloseAppsCountdown 60
+        ## TODO Show Welcome Message, close Application with a 60 second countdown before automatically closing
+        Show-InstallationWelcome -CloseApps '' -CloseAppsCountdown 60
 
         ## Show Progress Message (with the default message)
         Show-InstallationProgress
 
-TODO    ## <Perform Pre-Uninstallation tasks here>
+        ## TODO <Perform Pre-Uninstallation tasks here>
 
 
         ##*===============================================
@@ -248,7 +248,7 @@ TODO    ## <Perform Pre-Uninstallation tasks here>
             Execute-MSI @ExecuteDefaultMSISplat
         }
 
-TODO    ## <Perform Uninstallation tasks here>
+        ## TODO <Perform Uninstallation tasks here>
 
 
         ##*===============================================
@@ -256,9 +256,9 @@ TODO    ## <Perform Uninstallation tasks here>
         ##*===============================================
         [String]$installPhase = 'Post-Uninstallation'
 
-TODO    ## <Perform Post-Uninstallation tasks here>
+       ## TODO <Perform Post-Uninstallation tasks here>
 
-TODO    ## Display a message at the end of the uninstall
+       ## TODO Display a message at the end of the uninstall
         If (-not $useDefaultMsi) {
             Show-InstallationPrompt -Message 'Application is no longer installed' -ButtonMiddleText 'Ok' -NoWait
         }
@@ -270,7 +270,7 @@ TODO    ## Display a message at the end of the uninstall
         ##*===============================================
         [String]$installPhase = 'Pre-Repair'
 
-        ## Show Welcome Message, close Internet Explorer with a 60 second countdown before automatically closing
+        ## Show Welcome Message, close Application with a 60 second countdown before automatically closing
         Show-InstallationWelcome -CloseApps '' -CloseAppsCountdown 60
 
         ## Show Progress Message (with the default message)

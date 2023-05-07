@@ -1,12 +1,12 @@
 ##Application_Detection-with-logging.ps1
 ##Checks for the installation of "<Application Name>"
 
-# Set the name and version of the Application to check
-TODO$Application = "<Application Name>"
-TODO$Version = "<Application Version>"
+# TODO Set the name and version of the Application to check
+$Application = "<Application Name>"
+$Version = "<Application Version>"
 
-# Set the paths to the shortcut files for each Application
-TODO$ApplicationSC = "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\$Application\$Application.lnk"
+# TODO Set the paths to the shortcut files for each Application
+$ApplicationSC = "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\$Application\$Application.lnk"
 
 # Set the registry paths to check for program installation
 $RegPath = 'HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\', 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\'
