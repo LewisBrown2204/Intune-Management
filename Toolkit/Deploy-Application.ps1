@@ -107,9 +107,9 @@ Try {
     ##* VARIABLE DECLARATION
     ##*===============================================
     ## Variables: Application
-    [String]$appVendor = ''
-    [String]$appName = ''
-    [String]$appVersion = ''
+TODO[String]$appVendor = ''
+TODO[String]$appName = ''
+TODO[String]$appVersion = ''
     [String]$appArch = ''
     [String]$appLang = ''
     [String]$appRevision = ''
@@ -182,12 +182,12 @@ Try {
         [String]$installPhase = 'Pre-Installation'
 
         ## Show Welcome Message, close Internet Explorer if required, allow up to 3 deferrals, verify there is enough disk space to complete the install, and persist the prompt
-        Show-InstallationWelcome -CloseApps '' -AllowDefer -DeferTimes 3 -CheckDiskSpace -PersistPrompt
+TODO    Show-InstallationWelcome -CloseApps '' -AllowDefer -DeferTimes 3 -CheckDiskSpace -PersistPrompt
 
         ## Show Progress Message (with the default message)
         Show-InstallationProgress
 
-        ## <Perform Pre-Installation tasks here>
+TODO    ## <Perform Pre-Installation tasks here>
 
 
         ##*===============================================
@@ -205,7 +205,7 @@ Try {
             }
         }
 
-        ## <Perform Installation tasks here>
+TODO    ## <Perform Installation tasks here>
 
 
         ##*===============================================
@@ -213,9 +213,9 @@ Try {
         ##*===============================================
         [String]$installPhase = 'Post-Installation'
 
-        ## <Perform Post-Installation tasks here>
+TODO    ## <Perform Post-Installation tasks here>
 
-        ## Display a message at the end of the install
+TODO    ## Display a message at the end of the install
         If (-not $useDefaultMsi) {
             Show-InstallationPrompt -Message 'Application is now installed' -ButtonMiddleText 'Ok' -NoWait
         }
@@ -227,12 +227,12 @@ Try {
         [String]$installPhase = 'Pre-Uninstallation'
 
         ## Show Welcome Message, close Internet Explorer with a 60 second countdown before automatically closing
-        Show-InstallationWelcome -CloseApps '' -CloseAppsCountdown 60
+TODO    Show-InstallationWelcome -CloseApps '' -CloseAppsCountdown 60
 
         ## Show Progress Message (with the default message)
         Show-InstallationProgress
 
-        ## <Perform Pre-Uninstallation tasks here>
+TODO    ## <Perform Pre-Uninstallation tasks here>
 
 
         ##*===============================================
@@ -248,7 +248,7 @@ Try {
             Execute-MSI @ExecuteDefaultMSISplat
         }
 
-        ## <Perform Uninstallation tasks here>
+TODO    ## <Perform Uninstallation tasks here>
 
 
         ##*===============================================
@@ -256,9 +256,9 @@ Try {
         ##*===============================================
         [String]$installPhase = 'Post-Uninstallation'
 
-        ## <Perform Post-Uninstallation tasks here>
+TODO    ## <Perform Post-Uninstallation tasks here>
 
-        ## Display a message at the end of the uninstall
+TODO    ## Display a message at the end of the uninstall
         If (-not $useDefaultMsi) {
             Show-InstallationPrompt -Message 'Application is no longer installed' -ButtonMiddleText 'Ok' -NoWait
         }

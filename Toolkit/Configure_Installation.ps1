@@ -1,6 +1,6 @@
 ## Purpose: Install script to check if 'Process' is running, if running run Deploy-application.exe in session 1 with ServiceUI, else run it in Session 0 Silent
 
-$process_name = "Process"
+TODO$process_name = "Process"
 $processes = @(Get-Process $process_name -ErrorAction SilentlyContinue)
 
 if ($processes.Count -eq 0) {
