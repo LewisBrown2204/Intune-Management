@@ -30,13 +30,13 @@
         <!-- Path used to store temporary Toolkit files (with PSAppDeployToolkit as subdirectory), e.g. cache toolkit for cleaning up blocked apps. Normally you don't want this set to a path that is writable by regular users, this might lead to a security vulnerability. The default Temp variable for the LocalSystem account is C:\Windows\Temp. -->
         <Toolkit_RegPath>HKLM:\SOFTWARE</Toolkit_RegPath>
         <!-- Registry key used to store toolkit information (with PSAppDeployToolkit as child registry key), e.g. deferral history. -->
-        <Toolkit_LogPath>$envWinDir\Logs\Software</Toolkit_LogPath>
+        <Toolkit_LogPath>$envProgramData\Microsoft\IntuneManagementExtension\Logs</Toolkit_LogPath>
         <!-- Log path used for Toolkit logging. -->
         <Toolkit_TempPathNoAdminRights>$envTemp</Toolkit_TempPathNoAdminRights>
         <!-- Same as TempPath but used when RequireAdmin is False. -->
         <Toolkit_RegPathNoAdminRights>HKCU:\SOFTWARE</Toolkit_RegPathNoAdminRights>
         <!-- Same as RegPath but used when RequireAdmin is False. Bear in mind that since this Registry Key should be writable without admin permission, regular users can modify it also. -->
-        <Toolkit_LogPathNoAdminRights>$envProgramData\Logs\Software</Toolkit_LogPathNoAdminRights>
+        <Toolkit_LogPathNoAdminRights>$envProgramData\Microsoft\IntuneManagementExtension\Logs</Toolkit_LogPathNoAdminRights>
         <!-- Same as LogPath but used when RequireAdmin is False. -->
         <Toolkit_CompressLogs>False</Toolkit_CompressLogs>
         <!-- Specify if the log files should be bundled together in a compressed zip file -->
@@ -54,7 +54,7 @@
     <!--Toast Notification Options-->
     <Toast_Options>
         <Toast_Disable>True</Toast_Disable>
-        <Toast_AppName>PSAppDeployToolkit</Toast_AppName>
+        <Toast_AppName>Software Deployment</Toast_AppName>
     </Toast_Options>
     <!--Toast Notification Options-->
         
@@ -75,11 +75,11 @@
     <MSI_Options>
         <MSI_LoggingOptions>/L*v</MSI_LoggingOptions>
         <!-- Logging level used for MSI logging. -->
-        <MSI_LogPath>$envWinDir\Logs\Software</MSI_LogPath>
+        <MSI_LogPath>$envProgramData\Microsoft\IntuneManagementExtension\Logs\Installation</MSI_LogPath>
         <!-- Log path used for MSI logging. -->
-        <MSI_LogPathNoAdminRights>$envProgramData\Logs\Software</MSI_LogPathNoAdminRights>
+        <MSI_LogPathNoAdminRights>$envProgramData\Microsoft\IntuneManagementExtension\Logs\Installation</MSI_LogPathNoAdminRights>
         <!-- Log path used for MSI logging when RequireAdmin is False. -->
-        <MSI_InstallParams>REBOOT=ReallySuppress /QB-!</MSI_InstallParams>
+        <MSI_InstallParams>REBOOT=ReallySuppress /QN</MSI_InstallParams>
         <!-- Installation parameters used for non-silent MSI actions. -->
         <MSI_SilentParams>REBOOT=ReallySuppress /QN</MSI_SilentParams>
         <!-- Installation parameters used for silent MSI actions. -->

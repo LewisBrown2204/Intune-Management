@@ -111,11 +111,11 @@ Try {
     [String]$appName = ''
     [String]$appVersion = ''
     [String]$appArch = ''
-    [String]$appLang = 'EN'
-    [String]$appRevision = '01'
-    [String]$appScriptVersion = '1.0.0'
-    [String]$appScriptDate = 'XX/XX/20XX'
-    [String]$appScriptAuthor = '<author name>'
+    [String]$appLang = ''
+    [String]$appRevision = ''
+    [String]$appScriptVersion = ''
+    [String]$appScriptDate = ''
+    [String]$appScriptAuthor = 'Intune Manager'
     ##*===============================================
     ## Variables: Install Titles (Only set here to override defaults set by the toolkit)
     [String]$installName = ''
@@ -182,7 +182,7 @@ Try {
         [String]$installPhase = 'Pre-Installation'
 
         ## Show Welcome Message, close Internet Explorer if required, allow up to 3 deferrals, verify there is enough disk space to complete the install, and persist the prompt
-        Show-InstallationWelcome -CloseApps 'iexplore' -AllowDefer -DeferTimes 3 -CheckDiskSpace -PersistPrompt
+        Show-InstallationWelcome -CloseApps '' -AllowDefer -DeferTimes 3 -CheckDiskSpace -PersistPrompt
 
         ## Show Progress Message (with the default message)
         Show-InstallationProgress
@@ -217,7 +217,7 @@ Try {
 
         ## Display a message at the end of the install
         If (-not $useDefaultMsi) {
-            Show-InstallationPrompt -Message 'You can customize text to appear at the end of an install or remove it completely for unattended installations.' -ButtonRightText 'OK' -Icon Information -NoWait
+            Show-InstallationPrompt -Message 'Application is now installed' -ButtonMiddleText 'Ok' -NoWait
         }
     }
     ElseIf ($deploymentType -ieq 'Uninstall') {
@@ -227,7 +227,7 @@ Try {
         [String]$installPhase = 'Pre-Uninstallation'
 
         ## Show Welcome Message, close Internet Explorer with a 60 second countdown before automatically closing
-        Show-InstallationWelcome -CloseApps 'iexplore' -CloseAppsCountdown 60
+        Show-InstallationWelcome -CloseApps '' -CloseAppsCountdown 60
 
         ## Show Progress Message (with the default message)
         Show-InstallationProgress
@@ -258,6 +258,10 @@ Try {
 
         ## <Perform Post-Uninstallation tasks here>
 
+        ## Display a message at the end of the uninstall
+        If (-not $useDefaultMsi) {
+            Show-InstallationPrompt -Message 'Application is no longer installed' -ButtonMiddleText 'Ok' -NoWait
+        }
 
     }
     ElseIf ($deploymentType -ieq 'Repair') {
@@ -267,7 +271,7 @@ Try {
         [String]$installPhase = 'Pre-Repair'
 
         ## Show Welcome Message, close Internet Explorer with a 60 second countdown before automatically closing
-        Show-InstallationWelcome -CloseApps 'iexplore' -CloseAppsCountdown 60
+        Show-InstallationWelcome -CloseApps '' -CloseAppsCountdown 60
 
         ## Show Progress Message (with the default message)
         Show-InstallationProgress
