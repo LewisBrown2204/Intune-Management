@@ -1,5 +1,4 @@
 ## Purpose: Uninstall script to check if 'Process' is running, if running run Deploy-application.exe in session 1 with ServiceUI, else run it in Session 0 Silent
-## Version: 1.0
 
 $process_name = "Process"
 $processes = @(Get-Process $process_name -ErrorAction SilentlyContinue)
