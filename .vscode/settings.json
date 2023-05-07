@@ -1,0 +1,25 @@
+{
+    "todo-tree.filtering.excludeGlobs": [],
+    "files.exclude": {
+        "**/**/*.editorconfig": true,
+        "**/**/*.exe": true,
+        "**/**/*.gitattributes": true,
+        "**/**/*.gitignore": true,
+        "**/**/*.ico": true,
+        "**/**/*.pdf": true,
+        "**/**/*.png": true,
+        "*/ISSUE_TEMPLATE": true,
+        "*/PULL_REQUEST_TEMPLATE.md": true,
+        "CHANGELOG.txt": true,
+        "COPYING.Lesser": true,
+        "docs": true,
+        "Examples": true,
+        "LICENSE": true,
+        "material": true,
+        "mkdocs.yml": true,
+        "Sources": true,
+        "Testing": true,
+        "TODO.txt": true,
+        "wiki": true
+    }
+}
