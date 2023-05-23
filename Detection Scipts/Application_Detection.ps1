@@ -12,7 +12,7 @@ $ApplicationSC = "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\$Applicat
 $RegPath = 'HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\', 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\'
 
 # Set the path to the log file
-$logFile = "C:\ProgramData\Microsoft\IntuneManagementExtension\Logs\Detections\$Application $Version Intune_Detection.log"
+$logFile = "C:\ProgramData\Microsoft\IntuneManagementExtension\Logs\Detections\$Application $Version IME_Detection.log"
 
 # Initialize variables
 $allInstalled = $true
