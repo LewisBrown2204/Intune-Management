@@ -1,4 +1,4 @@
-##Application_Detection-with-logging.ps1
+##Application_Detection.ps1
 ##Checks for the installation of "<Application Name>"
 
 # TODO Set the name and version of the Application to check
