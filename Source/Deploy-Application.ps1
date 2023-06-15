@@ -187,7 +187,7 @@ Try {
         ## TODO Show Progress Message (with the default message)
         Show-InstallationProgress
 
-        ## <Perform Pre-Installation tasks here>
+        ## TODO <Perform Pre-Installation tasks here>
 
 
         ##*===============================================
