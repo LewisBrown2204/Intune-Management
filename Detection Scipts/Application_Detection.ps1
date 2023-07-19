@@ -3,6 +3,7 @@
 
 # TODO Set the name and version of the Application to check
 $Application = "<Application Name>"
+# TODO Set the version of the Application
 $Version = "<Application Version>"
 
 # TODO Set the paths to the shortcut files for each Application
@@ -45,6 +46,7 @@ if (Test-Path $ApplicationSC) {
     $allInstalled = $false
 }
 
+# Final check if the Application is installed and the shortcut file is present
 if ($allInstalled) {
     Write-Host "$Application $Version is installed and the shortcut file is present."
     $output += "$Application $Version is installed and the shortcut file is present.`r`n"
@@ -56,5 +58,6 @@ else {
     $exitCode = 1
 }
 
+# Write the output
 $output | Out-File $logFile -Append
 Exit $exitCode
