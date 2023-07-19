@@ -1,5 +1,5 @@
 ##Application_Detection.ps1
-##Checks for the installation of "<Application Name>"
+## TODO Checks for the installation of "<Application Name>"
 
 # TODO Set the name and version of the Application to check
 $Application = "<Application Name>"
